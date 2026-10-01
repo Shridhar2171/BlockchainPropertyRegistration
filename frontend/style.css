@@ -1,0 +1,878 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #172033;
+    color: white;
+    font-size: 22px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.brand p {
+    margin: 2px 0 0;
+    color: #7b8495;
+    font-size: 12px;
+}
+
+.network-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #eef8f1;
+    color: #237a42;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2fbf71;
+    animation: pulse 2s infinite;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0 50px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 230px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 18px;
+    background: #172033;
+    color: white;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #29344b;
+    color: #aebbd2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hero h2 {
+    margin: 18px 0 10px;
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+.hero h2 span {
+    display: block;
+    color: #5eb4ff;
+}
+
+.hero p {
+    margin: 0;
+    color: #b8c1d1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero-icon {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #29344b;
+    font-size: 70px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card,
+.wallet-card,
+.transaction-card {
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(31, 45, 61, 0.06);
+}
+
+.wallet-card {
+    margin-bottom: 25px;
+}
+
+.transaction-card {
+    margin-top: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+}
+
+.heading-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eef5ff;
+    font-size: 20px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.section-heading p {
+    margin: 4px 0 0;
+    color: #7b8495;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   BLOCKCHAIN INFORMATION
+===================================================== */
+
+.blockchain-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info-item {
+    padding: 15px;
+    border-radius: 10px;
+    background: #f7f9fc;
+    border: 1px solid #e9edf3;
+}
+
+.info-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #7b8495;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.info-value {
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #172033;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   WALLET
+===================================================== */
+
+.wallet-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wallet-address {
+    flex: 1;
+    padding: 12px 16px;
+    background: #f6f8fb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.wallet-label {
+    display: block;
+    margin-bottom: 4px;
+    color: #7b8495;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#walletAddress {
+    display: block;
+    font-family: monospace;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   CONTRACT ADDRESS
+===================================================== */
+
+.contract-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: #f7f9fc;
+    border: 1px solid #e9edf3;
+    border-radius: 8px;
+}
+
+.contract-box span {
+    flex: 1;
+    font-family: monospace;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   COPY BUTTON
+===================================================== */
+
+.copy-btn {
+    flex-shrink: 0;
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 7px;
+    background: #eef5ff;
+    color: #1769aa;
+    border: 1px solid #d9eaff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.copy-btn:hover {
+    background: #e2efff;
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #344054;
+}
+
+input,
+select {
+    width: 100%;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid #d7dce5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #5eb4ff;
+    box-shadow: 0 0 0 3px rgba(94, 180, 255, 0.12);
+}
+
+input::placeholder {
+    color: #a0a8b7;
+}
+
+small {
+    display: block;
+    margin-top: 6px;
+    color: #8a93a3;
+    font-size: 11px;
+}
+
+.input-with-unit {
+    position: relative;
+}
+
+.input-with-unit input {
+    padding-right: 65px;
+}
+
+.input-with-unit span {
+    position: absolute;
+    right: 13px;
+    top: 14px;
+    color: #7b8495;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition:
+        transform 0.15s,
+        opacity 0.15s,
+        background 0.15s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+}
+
+.primary-btn,
+.secondary-btn {
+    min-height: 46px;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: #172033;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #222e45;
+}
+
+.secondary-btn {
+    background: #eef5ff;
+    color: #1769aa;
+    border: 1px solid #d9eaff;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   LOADING BUTTON
+===================================================== */
+
+.button-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.loader {
+    width: 17px;
+    height: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.loader.dark {
+    border: 2px solid rgba(23, 32, 51, 0.2);
+    border-top-color: #172033;
+}
+
+
+/* =====================================================
+   STATUS MESSAGE
+===================================================== */
+
+.status-message {
+    margin-top: 15px;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#registrationStatus:empty {
+    display: none;
+}
+
+
+/* Success */
+
+.status-success {
+    background: #eef8f1;
+    border: 1px solid #ccebd7;
+    color: #237a42;
+}
+
+
+/* Error */
+
+.status-error {
+    background: #fff1f1;
+    border: 1px solid #f2cccc;
+    color: #b42318;
+}
+
+
+/* Loading */
+
+.status-loading {
+    background: #eef5ff;
+    border: 1px solid #d9eaff;
+    color: #1769aa;
+}
+
+
+/* Info */
+
+.status-info {
+    background: #f4f7fb;
+    border: 1px solid #e1e6ee;
+    color: #475467;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.property-result {
+    min-height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f7f9fc;
+    border: 1px solid #e9edf3;
+}
+
+.empty-state {
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #7b8495;
+}
+
+.empty-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    margin: 0 0 5px;
+    color: #344054;
+    font-size: 16px;
+}
+
+.empty-state p {
+    max-width: 250px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   PROPERTY RESULT
+===================================================== */
+
+.property-result h3 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dde2ea;
+    font-size: 17px;
+}
+
+.property-result p {
+    margin: 11px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.property-result strong {
+    display: inline-block;
+    min-width: 130px;
+    color: #344054;
+}
+
+.property-owner,
+.property-hash {
+    font-family: monospace;
+    word-break: break-all;
+}
+
+
+/* =====================================================
+   VERIFICATION BADGE
+===================================================== */
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border-radius: 15px;
+    background: #eef8f1;
+    color: #237a42;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.unverified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border-radius: 15px;
+    background: #fff6e5;
+    color: #a15c00;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   RECENT TRANSACTION
+===================================================== */
+
+.transaction-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.transaction-item {
+    padding: 15px;
+    border-radius: 10px;
+    background: #f7f9fc;
+    border: 1px solid #e9edf3;
+}
+
+.transaction-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #7b8495;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.transaction-value {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.transaction-hash {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transaction-hash .transaction-value {
+    flex: 1;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.feature:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 45, 61, 0.06);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #f1f5fa;
+    font-size: 18px;
+}
+
+.feature h3 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.feature p {
+    margin: 4px 0 0;
+    color: #7b8495;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #e5e9f0;
+    background: #ffffff;
+}
+
+footer p {
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+footer span {
+    color: #8a93a3;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(47, 191, 113, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(47, 191, 113, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(47, 191, 113, 0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blockchain-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .transaction-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-icon {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .network-status {
+        display: none;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 28px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .wallet-content {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .blockchain-info {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .contract-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contract-box .copy-btn {
+        width: 100%;
+    }
+
+    .transaction-hash {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .transaction-hash .copy-btn {
+        width: 100%;
+    }
+
+    .card,
+    .wallet-card,
+    .transaction-card {
+        padding: 20px;
+    }
+}
